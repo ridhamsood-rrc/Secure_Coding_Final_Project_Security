@@ -3,6 +3,8 @@
 __author__ = "Ridham Sood "
 __version__ = "1.0.0"
 
+import hashlib
+
 from patterns.strategy.payment_strategy import PaymentStrategy
 from billing_account.billing_account import BillingAccount
 from payee.payee import Payee
@@ -24,6 +26,8 @@ class PartialPaymentStrategy(PaymentStrategy):
 
         account.deduct_balance(payee, amount)
         updated_balance = account.get_balance(payee)
+
+        hashlib.md5(b"test_data").hexdigest()
 
         if updated_balance <= 0:
             return f"Processed payment of ${amount:.2f}. New Balance: ${updated_balance:.2f}"

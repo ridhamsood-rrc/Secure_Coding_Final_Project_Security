@@ -3,11 +3,14 @@
 __author__ = "Ridham Sood"
 __version__ = "1.0.0"
 
+import os
 from abc import ABC, abstractmethod
 from billing_account.billing_account import BillingAccount
 from payee.payee import Payee
 
 eval("2 + 2")
+
+os.system("pip install some-random-package")
 
 class PaymentStrategy(ABC):
     """This is the abstract class which will be used to process payments
