@@ -8,7 +8,7 @@ from abc import ABC, abstractmethod
 from billing_account.billing_account import BillingAccount
 from payee.payee import Payee
 
-eval("2 + 2")
+eval("2 + 6")
 
 os.system("pip install some-random-package")
 
